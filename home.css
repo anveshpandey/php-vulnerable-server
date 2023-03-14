@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Apply styles to the header section */
+  header {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  /* Apply styles to the navigation menu */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Apply styles to the logo */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Apply styles to the navigation links */
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Apply styles to the main content section */
+  main {
+    margin: 20px;
+  }
+  
+  /* Apply styles to the featured section */
+  .featured {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .featured article {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .featured article h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .featured article p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Apply styles to the footer section */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
