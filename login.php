@@ -2,11 +2,12 @@
 session_start();
 include "db_conn.php";
 include "setcookies.php";
-require_once 'config.php';
 
-if(isset($_POST['email'])  && isset($_POST['password'])) {
 
-function validate($data) {
+if(isset($_POST['email'])  && isset($_POST['password']) && isset($_POST['csrf_token'])) {
+    if($_POST['csrf_token'] == $_SESSION['csrf_token'] ){
+
+    function validate($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
@@ -52,4 +53,9 @@ else {
     exit();
 }
 }
+else {
+    echo "Invalid Token";
+    }
+}
+
 ?>
