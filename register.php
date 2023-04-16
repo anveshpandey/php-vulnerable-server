@@ -5,15 +5,17 @@ include "setcookies.php";
 
 if(isset($_POST['txt']) && isset($_POST['pswd']) && isset($_POST['email'])) {
     
-    function validate($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;        
-    }
-$txt   =  validate($_POST['txt']);
-$email =  validate($_POST['email']);
-$pswd  =  validate($_POST['pswd']);
+    // Will be used to sanitize the user input
+    // function validate($data) {
+    //     $data = trim($data);
+    //     $data = stripslashes($data);
+    //     $data = htmlspecialchars($data);
+    //     return $data;        
+    // }   
+$txt   = ($_POST['txt']);
+$email = ($_POST['email']);
+$pswd  = ($_POST['pswd']);
+$pswd  = hash("sha256",$pswd); 
     
 
 
